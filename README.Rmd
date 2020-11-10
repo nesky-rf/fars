@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # fars
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.com/nesky-rf/fars.svg?branch=master)](https://travis-ci.com/nesky-rf/fars)
 <!-- badges: end -->
 
 `fars` package provides easy exploration analysis of FARS (Fatality Analysis Reporting System) accidents dataset with summary and plot functions. This dataset is provides  fatal crash reports within the 50 US States, Puerto Rico and British Columbia since 1975. 
