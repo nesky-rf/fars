@@ -100,13 +100,14 @@ fars_summarize_years <- function(years) {
 #' @return This function returns a tibble with traffic crash data.
 #'
 #' @importFrom readr read_csv
+#' @importFrom tibble as_tibble
 fars_read <- function(filename) {
   if(!file.exists(filename))
     stop("file '", filename, "' does not exist")
   data <- suppressMessages({
     readr::read_csv(filename, progress = FALSE)
   })
-  dplyr::tbl_df(data)
+  tibble::as_tibble(data)
 }
 
 #' Print "make_filename"
