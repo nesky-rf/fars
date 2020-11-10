@@ -1,0 +1,25 @@
+Package: fars
+Title: Compiles accidents from FARS dataset
+Version: 0.1.0.9000
+Authors@R: 
+    person(given = "Jordi",
+           family = "Capdevila",
+           role = c("aut", "cre"),
+           email = "jordi.capdevila@gmail.com")
+Description: package provides easy exploration analysis of FARS (Fatality Analysis Reporting System) accidents dataset with summary and plot functions. This dataset is provides  fatal crash reports within the 50 US States, Puerto Rico and British Columbia since 1975.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Imports:
+  dplyr (>= 1.0.2),
+  tidyr (>= 1.1.2),
+  magrittr (>= 1.5.0),
+  maps (>= 3.3.0),
+  readr (>= 1.4.0)
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr

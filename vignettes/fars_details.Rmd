@@ -1,0 +1,55 @@
+---
+title: "fars_details"
+author: "Jordi Capdevila"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{fars_details}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r echo = FALSE, eval = FALSE}
+library(fars)
+```
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`fars` package provides easy exploration analysis of FARS (Fatality Analysis Reporting System) accidents dataset with summary and plot functions. This dataset is provides  fatal crash reports within the 50 US States, Puerto Rico and British Columbia since 1975. 
+
+## Required set-up for this package
+Currently, this package exists in a development version on GitHub. To use the package, you need to install it directly from GitHub using the `install_github` function from `devtools`.
+
+```{r echo=FALSE, message=FALSE, eval=FALSE}
+#devtools::install_github("nesky-rf/fars")
+```
+
+The actual `fars` package reads accidents datasets with the naming convention "accidents-yyyy.csv.bz2", with an integer column value `STATE` represented as alphabetical order (i.e. Alabama=0, Alaska=1, Arizona=3, ... ), for plotting, location of the traffic crash, with columns coordinates `LONGITUDE` and `LATITUDE`.
+
+## Example
+
+This is an example which shows how to get summaries:
+
+```{r example_summary}
+library(fars)
+## to see a summary of accidents, we can specify a single value:
+fars::fars_summarize_years(2013)
+# or a list of values,
+fars::fars_summarize_years(2013:2015)
+# or a set of values,
+fars::fars_summarize_years(c(2013,2015))
+```
+
+This other example shows how to plot accidents location in a state:
+
+```{r example_plot}
+library(fars)
+## Alabama state crashes occured in 2013
+fars::fars_map_state(1, 2013)
+
+```
