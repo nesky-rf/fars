@@ -12,6 +12,9 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
+```{r setup, echo=FALSE}
+knitr::opts_knit$set(root.dir = "vignettes/")
+```
 
 # fars
 

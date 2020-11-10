@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.com/nesky-rf/fars.svg?branch=master)](https://travis-ci.com/nesky-rf/fars)
 <!-- badges: end -->
 
 `fars` package provides easy exploration analysis of FARS (Fatality
@@ -32,10 +34,6 @@ This is an example which shows how to get summaries:
 library(fars)
 ## to see a summary of accidents, we can specify a single value:
 fars::fars_summarize_years(2013)
-#> Warning: `tbl_df()` is deprecated as of dplyr 1.0.0.
-#> Please use `tibble::as_tibble()` instead.
-#> This warning is displayed once every 8 hours.
-#> Call `lifecycle::last_warnings()` to see where this warning was generated.
 #> # A tibble: 12 x 2
 #>    MONTH `2013`
 #>    <dbl>  <int>
